@@ -1,0 +1,49 @@
+{
+        public MainWindow()
+        {
+            InitializeComponent();
+        }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void Plus_Click(object sender, RoutedEventArgs e)
+        {
+            double a, b, c;
+            a = double.Parse(box1.Text);
+            b = double.Parse(box2.Text);
+            c = a + b;
+            box3.Text = c.ToString();
+        }
+
+        private void minus_Click(object sender, RoutedEventArgs e)
+        {
+            double a, b, c;
+            a = double.Parse(box1.Text);
+            b = double.Parse(box2.Text);
+            c = a - b;
+            box3.Text = c.ToString();
+        }
+
+        private void division_Click(object sender, RoutedEventArgs e)
+        {
+            double a, b, c;
+            a = double.Parse(box1.Text);
+            b = double.Parse(box2.Text);
+            c = a / b;
+            box3.Text = c.ToString();
+        }
+
+        private void multiplication_Click(object sender, RoutedEventArgs e)
+        {
+            double a, b, c;
+            a = double.Parse(box1.Text);
+            b = double.Parse(box2.Text);
+            c = a * b;
+            box3.Text = c.ToString();
+        }
+    }
+}
+
