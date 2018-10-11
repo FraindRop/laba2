@@ -1,0 +1,57 @@
+{ 
+System.Windows.Threading.DispatcherTimer Timer; 
+public Window() 
+{ 
+InitializeComponent(); 
+Timer = new System.Windows.Threading.DispatcherTimer(); 
+Timer.Tick += new EventHandler(dispatcherTimer_Tick); 
+Timer.Interval = new TimeSpan(0, 0, 1); 
+} 
+int m, s, ms; 
+void button1_Click(object sender, RoutedEventArgs e) 
+{ 
+
+Timer.Start(); 
+} 
+void dispatcherTimer_Tick(object sender, EventArgs e) 
+{ 
+ms += 1; 
+if (ms == 60) 
+{ s+=1; 
+ms = 0; 
+} 
+if (s == 60) 
+{ 
+s = 0; 
+m += 1; 
+} 
+
+if (sec.IsChecked == true && min.IsChecked == true && hour.IsChecked == false) 
+{ 
+label1.Content = s.ToString() + " : " + ms.ToString(); 
+} 
+if (sec.IsChecked == true && min.IsChecked == false && hour.IsChecked == false) 
+{ 
+label1.Content = ms.ToString(); 
+
+} 
+if (sec.IsChecked == true && min.IsChecked == true && hour.IsChecked == true) 
+{ 
+label1.Content = (m.ToString() + " : " + s.ToString() + " : " + ms.ToString()); 
+
+} 
+} 
+void button2_Click(object sender, RoutedEventArgs e) 
+{ 
+Timer.Stop(); 
+} 
+void button3_Click(object sender, RoutedEventArgs e) 
+{ 
+m = 0; 
+s = 0; 
+ms = 0; 
+label1.Content = ("0 : 0 : 0"); 
+Timer.Stop(); 
+} 
+}
+}
