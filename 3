@@ -1,0 +1,31 @@
+{
+        public MainWindow()
+        {
+            InitializeComponent();
+        }
+
+        private void box1_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            List<String> planet = new List<string>();
+            {
+                planet.Add("Меркурий");
+                if (box1.SelectedIndex == 0) box2.Content = "1 планета от солнца";
+                planet.Add("Венера");
+                if (box1.SelectedIndex == 1) box2.Content = "2 планета от солнца";
+                planet.Add("Земля");
+                if (box1.SelectedIndex == 2) box2.Content = "3 планета от солнца";
+                planet.Add("Марс");
+                if (box1.SelectedIndex == 3) box2.Content = "4 планета от солнца";
+                planet.Add("Юпитер");
+                if (box1.SelectedIndex == 4) box2.Content = "5 планета от солнца";
+                planet.Add("Сатурн");
+                if (box1.SelectedIndex == 5) box2.Content = "6 планета от солнца";
+                planet.Add("Уран");
+                if (box1.SelectedIndex == 6) box2.Content = "7 планета от солнца";
+                planet.Add("Нептун");
+                if (box1.SelectedIndex == 7) box2.Content = "8 планета от солнца";
+            }
+
+        }
+    }
+}
