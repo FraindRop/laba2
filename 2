@@ -1,0 +1,22 @@
+{
+        public MainWindow()
+        {
+            InitializeComponent();
+        }
+
+        private void box2_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void add_Click(object sender, RoutedEventArgs e)
+        {
+            string par;
+            par = Convert.ToString(box1.Text);
+            box2.Items.Add(par);
+            box1.Text = "";
+            box1.Clear();
+            
+        }
+        }
+    }
