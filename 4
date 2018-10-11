@@ -1,0 +1,115 @@
+{
+        int kappa1;
+        int kappa2;
+        int kappa3;
+        public MainWindow()
+        { 
+
+            InitializeComponent();
+            for (int i = 1800; i <= 2018; i++)
+            {
+                Year.Items.Add(i);
+            }
+            for (int i = 1; i <= 12; i++)
+            {
+                Month.Items.Add(i);
+            } 
+            
+
+        }
+
+        private void Month_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Day.Items.Clear(); if (Month.SelectedIndex == 0)
+            {
+                if (Month.SelectedIndex == 0) 
+                for (int i = 1; i <= 31; i++) Day.Items.Add(i);
+
+                
+            }
+            {
+                    if (Month.SelectedIndex == 1) 
+                for (int i = 1; i <= 28; i++) Day.Items.Add(i);
+                
+            }
+            {
+                if (Month.SelectedIndex == 2) 
+                for (int i = 1; i <= 31; i++) Day.Items.Add(i);
+                
+            }
+            {
+                if (Month.SelectedIndex == 3) 
+                for (int i = 1; i <= 30; i++) Day.Items.Add(i);
+                
+            }
+            {
+                if (Month.SelectedIndex == 4) 
+                for (int i = 1; i <= 31; i++) Day.Items.Add(i);
+                
+            }
+            
+            {
+                if (Month.SelectedIndex == 5) 
+                for (int i = 1; i <= 30; i++) Day.Items.Add(i);
+                
+            }
+            
+            {
+                if (Month.SelectedIndex == 6) 
+                for (int i = 1; i <= 31; i++) Day.Items.Add(i);
+                
+            }
+            
+            {
+                if (Month.SelectedIndex == 7) 
+                for (int i = 1; i <= 30; i++) Day.Items.Add(i);
+                
+            }
+            
+            {
+                if (Month.SelectedIndex == 8) 
+                for (int i = 1; i <= 31; i++) Day.Items.Add(i);
+                
+            }
+            
+            {
+                if (Month.SelectedIndex == 9) 
+                for (int i = 1; i <= 30; i++) Day.Items.Add(i);
+                
+            }
+           
+            {
+                if (Month.SelectedIndex == 10) 
+                for (int i = 1; i <= 31; i++) Day.Items.Add(i);
+                
+            }
+            
+            {
+                if (Month.SelectedIndex == 11) 
+                for (int i = 1; i <= 30; i++) Day.Items.Add(i);
+                
+            }
+           
+            {
+                if (Month.SelectedIndex == 12) 
+                for (int i = 1; i <= 31; i++) Day.Items.Add(i);
+               string fix = Month.SelectedItem.ToString();
+        	kappa2 = int.Parse(fix);
+            }
+            int day1 = DateTime.Now.Day - kappa3;
+            int month1 = DateTime.Now.Month - kappa2;
+            int year1 = DateTime.Now.Year - kappa1;
+            lab2.Content = day1 + ":" + month1 + ":" + year1;
+
+        }
+
+        private void Year_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            
+            {
+                string pre = Year.SelectedItem.ToString();
+                kappa1 = int.Parse(pre);   
+            }
+        }
+    }
+}
